@@ -9,13 +9,16 @@ function Page({}: Props) {
   return (
     <div className="min-h-screen bg-background from-blue-50 to-white">
       <header className="relative overflow-hidden">
-        <nav className="container mx-auto px-4 py-6 flex items-center justify-between">
+        <nav className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-start md:items-center justify-between space-y-4 md:space-y-0">
+          {/* Logo */}
           <div className="flex items-center space-x-2">
             <h1 className="text-2xl font-bold text-primary-800">
               TravelAI Guide
             </h1>
           </div>
-          <div className="hidden md:flex items-center space-x-8">
+
+          {/* Links */}
+          <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-8">
             <a href="/Itinerary">
               <div className="group hover:border-gray-500 border-transparent border-2 hover:shadow-xs px-2 py-1 rounded-md transition-all duration-200">
                 <span className="text-amber-600 group-hover:text-white transition-colors duration-200">
@@ -27,11 +30,13 @@ function Page({}: Props) {
               href="/suggested"
               className="font-medium hover:text-primary-600 transition-colors"
             >
-              Suggested Tours
+              <div className="px-2 py-1 rounded-md transition-all duration-200">
+                <span className="">Suggested Tours</span>
+              </div>
             </a>
           </div>
-          <div></div>
         </nav>
+
         <div className="container mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
